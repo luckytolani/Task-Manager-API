@@ -61,6 +61,10 @@ router.get('/users/me', auth , async (req, res) => {
     res.send(req.user)
 })
 
+router.get('/automatic', async (req,res)=>{
+    res.send("checking")
+})
+
 
 router.patch('/users/me', auth , async (req, res) => {
     const updates = Object.keys(req.body)
